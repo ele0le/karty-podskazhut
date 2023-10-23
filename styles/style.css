@@ -33,7 +33,7 @@ button:disabled {
 }
 
 .page {
-  min-inline-size: 360px;
+  min-width: 360px;
   margin: 0;
   color: var(--text-color, #312a4e);
   background-color: var(--bg-color, #f3efec);
@@ -60,11 +60,11 @@ figure {
 }
 
 .content-section {
-  padding: 0 5vi;
+  padding: 0 5vw;
 }
 
 .header__title {
-  font-size: clamp(1.875rem, 0rem + 8.3333vw, 7.5rem);
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
   margin-bottom: 40px;
 }
 
@@ -121,11 +121,12 @@ figure {
 .header__theme-button_is-active::after {
   content: "";
   position: absolute;
+  display: block;
   background-color: var(--accent-color, #ffab6b);
-  block-size: 0.5ch;
-  inline-size: 110%;
-  top: 1ch;
-  left: -4px;
+  block-size: 0.4em;
+  width: calc(100% + 0.2em);
+  inset-block-end: 0.1em;
+  inset-inline-start: -0.1em;
   z-index: -1;
 }
 
@@ -145,12 +146,12 @@ figure {
   font-weight: 700;
   font-size: 30px;
   padding: 0 4px;
-  margin-right: 1px;
+  margin-inline-end: 1px;
 }
 
 .content__text-block 
 .content__paragraph:not(:last-of-type) {
-  margin-bottom: 1.5em;
+  margin-block-end: 1.5em;
 }
 
 .theme_dark 
@@ -162,8 +163,8 @@ figure {
 .content__figure {
   position: relative;
   margin: 7% 0;
-  inline-size: calc(100% + (5vi * 2));
-  padding-right: calc(-5vi);
+  inline-size: calc(100% + (5vw * 2));
+  inset-inline-start: calc(-5vw);
 }
 
 .content__picture-caption {
@@ -240,14 +241,17 @@ figure {
 
 .content__list-item::before {
   content: "";
+  position: absolute;
+  display: block;
   width: 15px;
   height: 15px;
   background-image: url(../images/marker-light.svg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  margin-left: -25px;
+  transform: translate(0, -50%);
+  inset-block-start: 50%;
+  inset-inline-start: -25px;
 }
 
 .theme_dark 
@@ -256,7 +260,7 @@ figure {
 }
 
 .content__list-item:not(:last-of-type) {
-  padding-bottom: 10px;
+  margin-block-end: 10px;
 }
 
 .footer {
