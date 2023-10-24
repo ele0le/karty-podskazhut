@@ -34,7 +34,7 @@ button:disabled {
 
 .page {
   min-width: 360px;
-  margin: 0;
+  margin: 0 auto;
   color: var(--text-color, #312a4e);
   background-color: var(--bg-color, #f3efec);
   font-family: var(--main-font, sans-serif);
@@ -70,7 +70,8 @@ figure {
 
 .content__title {
   font-size: 30px;
-  margin: 7% 0 2.5%;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
 }
 
 .header {
@@ -83,7 +84,8 @@ figure {
   align-items: center;
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header__theme-toggler {
@@ -264,7 +266,9 @@ figure {
 }
 
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10%;
   padding: 2.5%;
   border-top: 1px solid currentColor;
@@ -272,5 +276,5 @@ figure {
 
 .footer__copyright {
   font-size: 18px;
-  font: inherit;
+  font-style: var(--main-font, sans-serif);
 }
