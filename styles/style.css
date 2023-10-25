@@ -171,7 +171,7 @@ figure {
 
 .content__picture-caption {
   text-align: center;
-  font-size: inherit;
+  font-size: 18px;
   padding: 20px 0;
   border-bottom: 1px solid currentColor;
 }
@@ -276,5 +276,5 @@ figure {
 
 .footer__copyright {
   font-size: 18px;
-  font-style: var(--main-font, sans-serif);
+  font-family: var(--main-font, sans-serif);
 }
